@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
 optnobjc = webdriver.ChromeOptions()
-optnobjc.add_experimental_option("detach", True)
+optnobjc.headless = True
 optnobjc.set_capability("acceptInsecureCerts", True)
 drivobjc = webdriver.Chrome(options=optnobjc, service=Service(ChromeDriverManager().install()))
 
